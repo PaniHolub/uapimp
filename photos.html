@@ -2,18 +2,142 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ГОЛУБЯТНІК — ФОТОЧКІ</title>
+
+<style>
+
+body {
+    background: #080008;
+    color: #d8a7ff;
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    color: #c15cff;
+    text-shadow:
+        0 0 5px #b84cff,
+        0 0 20px #8b00ff;
+}
+
+p {
+    color: #a45bcf;
+}
+
+/* ГАЛЕРЕЯ */
+
+.gallery {
+    width: 1000px;
+    max-width: 95%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ОКРЕМА ФОТКА */
+
+.photo {
+    padding: 10px;
+
+    border: 1px solid #6d2094;
+    background: #100016;
+
+    box-shadow:
+        0 0 12px rgba(150, 0, 255, 0.3);
+
+    transition: 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 25px #8b00ff;
+}
+
+.photo img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo p {
+    margin-bottom: 5px;
+    color: #ff7de9;
+}
+
+
+/* НАЗАД */
+
+.back {
+    display: inline-block;
+    margin-top: 30px;
+
+    color: #ff7de9;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: white;
+}
+
+
+/* ТЕЛЕФОН */
+
+@media (max-width: 700px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 </head>
 
-<body style="background:#080008;color:#d8a7ff;font-family:monospace;text-align:center;">
+
+<body>
 
 <h1>♡ МОЇ ФОТОЧКІ ♡</h1>
 
-<p>тут колись будуть фоточки...</p>
+<p>маленький архів всякої хуйні</p>
 
-<a href="index.html" style="color:#ff7de9;">
+
+<div class="gallery">
+
+    <div class="photo">
+        <img src="photos/Зеля.png">
+        <p>♡ Зеля</p>
+    </div>
+
+
+    <div class="photo">
+        <img src="photos/вайб.png">
+        <p>♡ вайб</p>
+    </div>
+
+
+    <div class="photo">
+        <img src="photos/оптімус.png">
+        <p>♡ оптімус</p>
+    </div>
+
+</div>
+
+
+<a href="index.html" class="back">
 ← назад на головну
 </a>
+
 
 </body>
 </html>
