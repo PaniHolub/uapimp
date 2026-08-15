@@ -4,184 +4,216 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UAPIMP ♡</title>
+<title>ГОЛУБЯТНІК♡</title>
 
 <style>
-* {
-    box-sizing: border-box;
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background:
+            radial-gradient(circle at top, #24003d 0%, #090008 45%, #000000 100%);
+        color: #d9a7ff;
+        font-family: "Courier New", monospace;
+        min-height: 100vh;
+    }
+   .heart {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 50px; 
+    color: #ff7de9;
+    text-shadow: 0 0 10px #ff00ff;
+                 0 0 25px #ff00ff,
+                 0 0 40px #8b00ff;
 }
 
-body {
-    margin: 0;
-    background:
-        radial-gradient(circle at top, #30004d 0%, #0b0010 45%, #000 100%);
-    color: #d8a7ff;
-    font-family: "Courier New", monospace;
-    min-height: 100vh;
-}
+    /* головний контейнер */
 
-.site {
-    width: 1000px;
-    max-width: 94%;
-    margin: 30px auto;
-}
+    .site {
+        width: 1000px;
+        max-width: 94%;
+        margin: 30px auto;
+    }
 
-/* ШАПКА */
+    /* заголовок */
 
-header {
-    text-align: center;
-    padding: 35px 10px;
-    border: 1px solid #8b2fc9;
-    background: #080008;
-    box-shadow:
-        0 0 15px #7b20b5,
-        inset 0 0 30px #180020;
-}
+    header {
+        text-align: center;
+        padding: 35px 10px;
+        border: 1px solid #7b20b5;
+        background: #080008;
+        box-shadow:
+            0 0 10px #7b20b5,
+            inset 0 0 30px #180020;
+    }
 
-header h1 {
+  header h1 {
     margin: 0;
     font-size: 70px;
     color: #b84cff;
     text-shadow:
         0 0 5px #b84cff,
         0 0 20px #8b00ff;
+    animation: glow 2s infinite alternate;
 }
 
-header p {
-    color: #a45bcf;
-    letter-spacing: 3px;
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #b84cff,
+            0 0 10px #8b00ff;
+    }
+
+    to {
+        text-shadow:
+            0 0 5px #ff7de9,
+            0 0 30px #ff00ff,
+            0 0 50px #8b00ff;
+    }
+}
+    animation: glow 2s infinite alternate;
 }
 
-/* МЕНЮ */
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #b84cff,
+            0 0 10px #8b00ff;
+    }
 
-nav {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
+    to {
+        text-shadow:
+            0 0 5px #ff7de9,
+            0 0 30px #ff00ff,
+            0 0 50px #8b00ff;
+    }
 }
 
-nav a {
-    color: #d88cff;
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid #69209a;
-    background: #100016;
-}
+    header p {
+        color: #9b5bc7;
+        letter-spacing: 3px;
+    }
 
-nav a:hover {
-    background: #7511ad;
-    color: white;
-    box-shadow: 0 0 15px #a000ff;
-}
+    /* меню */
 
-/* ОСНОВНИЙ КОНТЕНТ */
+    nav {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
 
-.grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-}
+    nav a {
+        color: #d88cff;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #69209a;
+        background: #100016;
+    }
 
-.box {
-    margin-top: 20px;
-    padding: 25px;
-    border: 1px solid #6d2094;
-    background: rgba(8, 0, 12, 0.95);
-    box-shadow:
-        0 0 12px rgba(150, 0, 255, 0.3),
-        inset 0 0 25px rgba(80, 0, 120, 0.2);
-}
+    nav a:hover {
+        background: #7511ad;
+        color: white;
+        box-shadow: 0 0 15px #a000ff;
+    }
 
-.box h2 {
-    margin-top: 0;
-    color: #c15cff;
-}
+    /* блоки */
 
-.box h2::before {
-    content: "✦ ";
-}
+    .box {
+        margin-top: 20px;
+        padding: 25px;
+        border: 1px solid #6d2094;
+        background: rgba(8, 0, 12, 0.9);
+        box-shadow:
+            0 0 10px rgba(150, 0, 255, 0.25),
+            inset 0 0 25px rgba(80, 0, 120, 0.15);
+    }
 
-p {
-    line-height: 1.7;
-}
+    .box h2 {
+        margin-top: 0;
+        color: #c15cff;
+    }
 
-.big {
-    font-size: 20px;
-}
+    .box h2::before {
+        content: "✦ ";
+    }
 
-.pink {
-    color: #ff7de9;
-}
-
-a {
-    color: #d174ff;
-}
-
-a:hover {
-    color: white;
-}
-
-/* ТВОЄ ПОВІДОМЛЕННЯ */
-
-.warning {
-    text-align: center;
-    color: #ff7de9;
-    font-size: 18px;
-    padding: 15px;
-    border: 1px dashed #a83ccf;
-    margin-top: 20px;
-    text-shadow: 0 0 8px #ff00d9;
-}
-
-/* ФУТЕР */
-
-footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 20px;
-    border-top: 1px solid #6d2094;
-    color: #75438c;
-}
-
-/* ДЛЯ ТЕЛЕФОНА */
-
-@media (max-width: 700px) {
+    /* сітка */
 
     .grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
     }
 
-    header h1 {
-        font-size: 45px;
+    /* посилання */
+
+    a {
+        color: #d174ff;
     }
-}
+
+    a:hover {
+        color: white;
+    }
+
+    /* текст */
+
+    p {
+        line-height: 1.7;
+    }
+
+    .pink {
+        color: #ff7de9;
+    }
+
+    .big {
+        font-size: 20px;
+    }
+
+    /* футер */
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        margin-top: 20px;
+        border-top: 1px solid #6d2094;
+        color: #75438c;
+    }
+
+    /* мобільні */
+
+    @media (max-width: 700px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+
+        header h1 {
+            font-size: 45px;
+        }
+    }
 </style>
 </head>
-
 <body>
 
-<div class="site">
+<div class="heart">♡</div>
+}
 
 <header>
+    <h1>ГОЛУБЯТНІК</h1>
 
-    <h1>UAPIMP</h1>
-
-    <p>♡ welcome to my little dark corner ♡</p>
-
-    <div class="warning">
-        Нєфіг з ноги вриватися в мій особистий простір, нєгодяі!
-    </div>
+    <p>♡ welcome to my sick and sad website.  ♡</p>
 
     <nav>
-        <a href="#">ГОЛОВНА</a>
-        <a href="#">БЛОХ</a>
+        <a href="#">ГАЛАВНАЯ</a>
+        <a href="blog.html">БЛОХ</a>
         <a href="photos.html">ФОТОЧКІ</a>
-        <a href="#">БЛEКУХА-НАХУЙ</a>
-        <a href="#">ХТОЯ</a>
+        <a href="musick.html">БЛЕКУХА</a>
+        <a href="dick.html">ЩОСЬ ТУТ БУДЕ</a>
     </nav>
-
 </header>
 
 
@@ -190,55 +222,48 @@ footer {
 <main>
 
     <section class="box">
-
-        <h2>Гав-гав-гав1 Йди геть111</h2>
+        <h2>Вітаю.</h2>
 
         <p class="big">
-            воу, шо ти тут забув7 Балбєсік, дєлать тєбє нєхуй ♡
+          Вам не пощастило потрапити на мій сайт ♡
         </p>
 
-        <p>
-            Нічого важливого та ціквого ви тут не знайдете.
+        <p>тут ви не знайдете нічого цікавого, можете виходити.
         </p>
 
         <p class="pink">
-            stay weird ♡
+            Stay away from me♡
         </p>
-
     </section>
 
 
     <section class="box">
-
-        <h2>останній висєр</h2>
+        <h2>Останній пост</h2>
 
         <p>
             <span class="pink">14.08.2026</span>
         </p>
 
         <p>
-            нушо лохі, поки ви сосалі сісю я писало сайти1 Тут найтоксичніший автор-адмін чи взагалі Бох цього дохлого інтернету...
+            Сьогодні мені наснилася солоденька відеокарта GTX 1660 Super 6 GB.
         </p>
 
-        <a href="#">хочеш спалити собі очі7 →</a>
-
+        <a href="#">маю бажання спалити очі →</a>
     </section>
 
 
     <section class="box">
-
-        <h2>чим Я страдаю</h2>
+        <h2>Мої інтересики</h2>
 
         <p>
             ♡ музика<br>
             ♡ малювання<br>
-            ♡ Linux<br>
+            ♡ В'язать людей<br>
             ♡ фотографія<br>
             ♡ гітара<br>
             ♡ старий інтернет<br>
-            ♡ чорний гумор 9піздьж,жартувати я не вмію0
+            ♡ чорний гумор лан, чот перегнула...тут не буде жартів
         </p>
-
     </section>
 
 </main>
@@ -247,25 +272,23 @@ footer {
 <aside>
 
     <section class="box">
-
         <h2>ХТОЯ</h2>
+       <img src="myphoto.png" width="300">
 
         <p>
-            Я — UAPIMP ♡
+            я — БОХ ♡
         </p>
-        
-        <img src="images/myphoto.jpeg" width="300">
 
         <p>
-            абажаю музику, малювати,дристати,
-            комп'ютери ламать,грати на музичних інструментах...
+            Котрий люибить комп'ютери...ламати...грати в пк тобто. 
+           Ще обожнює битися головою об стінку по вечорам, так швише 
+           кров до голови доходить і приходять ще більш геніальніші
+           ідеї як зламати свій кампуктєр.
         </p>
-
     </section>
 
 
     <section class="box">
-
         <h2>Зара слухаю</h2>
 
         <p class="pink">
@@ -275,12 +298,10 @@ footer {
         <p>
             ━━━━━━━━━━━
         </p>
-
     </section>
 
 
     <section class="box">
-
         <h2>Статус</h2>
 
         <p>
@@ -288,9 +309,8 @@ footer {
         </p>
 
         <p>
-            mood: ☾
+            mood: краще не трогать
         </p>
-
     </section>
 
 </aside>
@@ -299,13 +319,33 @@ footer {
 
 
 <footer>
-
     ♡ made with hate & love ♡<br>
-    © 2026 UAPIMP
-
+    © 2026 holubnyak
 </footer>
 
 </div>
+   <script>
+let secretCode = "pani";
+let input = "";
+
+document.addEventListener("keydown", function(event) {
+    input += event.key.toLowerCase();
+
+    if (input.length > secretCode.length) {
+        input = input.slice(-secretCode.length);
+    }
+
+    if (input === secretCode) {
+        alert(
+            "ЯК ТИ ВЗАГАЛІ ДО ЦЬОГО ДОГАДАВСЯ?!\n\n" +
+            "хах,я в шоці...\n\n" +
+            "ОПТІМУС ПРАЙМ АПЛОДУЄ СТОЯ 👏"
+        );
+
+        input = "";
+    }
+});
+</script>
 
 </body>
 </html>
